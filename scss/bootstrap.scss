@@ -1,0 +1,235 @@
+//** variables**//
+$color-fuente: white;
+
+$font-gill: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+$primary: #4753ff;
+$danger: #ff4136;
+
+$theme-colors: (
+  "primary": $primary,
+  "danger": $danger
+);
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+body {
+    background: #000000;
+  
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #434343, #000000);
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #434343, #000000);
+  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    min-height: 100vh;
+  }
+  
+  .text-justify {
+    text-align: justify;
+  }
+  
+
+  //**media queries**//
+
+  @media (max-width: 767px) {
+    #textoindex {
+      margin-top: 30px;
+    }
+  }
+
+  @media (max-width: 508){
+    .textofooter{
+      margin-bottom: 2rem;
+    }
+  }
+
+  .card-text, .card-title {
+    color: black;
+  }
+  
+  .nav-link {
+    color: $color-fuente;
+  }
+  p {
+    font-size: 20px;
+    text-decoration: none;
+    color: $color-fuente;
+    font-family: $font-gill
+}
+  
+  h3 {
+    font-family: $font-gill;
+    color: $color-fuente;
+  }
+  
+  h1 {
+    color: $color-fuente;
+    font-family: $font-gill
+}
+  h4 {
+    color: $color-fuente;
+  }
+
+  //**anidacion**//
+  #grillaservicios{
+    margin-top: 70px;
+
+  .iconoauto {
+    color: rgb(0, 191, 255);
+    width: 100%;
+    height: 35px;
+  }
+  
+  .iconocasa {
+    color: rgb(180, 117, 0);
+    width: 100%;
+    height: 35px;
+  }
+  
+  .iconovida {
+    color: rgb(250, 105, 250);
+    width: 100%;
+    height: 35px;
+  }
+  
+  .iconoart {
+    color: rgb(89, 145, 89);
+    width: 100%;
+    height: 35px;
+  }
+  
+  .iconoconsorcio {
+    color: rgb(255, 33, 33);
+    width: 100%;
+    height: 35px;
+  }
+  
+  .iconocelu {
+    color: rgb(1, 1, 116);
+    width: 100%;
+    height: 35px;
+  }
+}
+  
+  #titulo {
+    margin-top: 50px;
+  }
+  
+  #iconos {
+    margin-bottom: 10px;
+  }
+  
+  #footerservicios {
+    margin-top: 77px;
+  }
+
+  //**anidacion**//
+  
+  .map-responsive {
+    overflow: hidden;
+    padding-bottom: 300px;
+    position: relative;
+    height: 0;
+  
+    iframe {
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+    }
+  }
+  
+  #footer {
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  #contenedor-contacto {
+    display: flex;
+  }
+  
+  #footer-contacto {
+    margin-top: 243px;
+  }
+  
+  #h5compañias {
+    font-size: 30px;
+  }
+
+
+  //** mixins**//
+
+
+  @mixin footerbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    padding: 2rem 8%;
+    background-color:$primary;
+    margin-top: 100px;
+  }
+  
+  @mixin textofooter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 20px;
+    color: $color-fuente;
+    flex-wrap:wrap;
+    text-align: center;
+    a{
+        text-decoration: none;
+        color: $color-fuente;   
+    }
+  }
+
+  .footerboxindex{
+    @include footerbox;
+    margin-top: 180px;
+  }
+  .textofooterindex{
+    @include textofooter;
+}
+
+.footerboxservicios{
+    @include footerbox;
+    margin-top: 78px;
+}
+.textofooterservicios{
+    @include textofooter;
+}
+
+.footerboxnosotros{
+    @include footerbox;
+}
+.textofooternosotros{
+    @include textofooter;
+}
+
+.footerboxcontacto{
+    @include footerbox();
+    margin-top: 160px;
+}
+.textofootercontacto{
+    @include textofooter();
+}
+
+.footerboxcompañias{
+    @include  footerbox();
+}
+
+.textofootercompañias{
+    @include textofooter();
+}
