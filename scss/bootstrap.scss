@@ -233,3 +233,17 @@ body {
 .textofootercompañias{
     @include textofooter();
 }
+
+.page_404{
+  padding: 40px 0;
+  background: #4753ff;
+}
+
+.page_404 img{
+  width: 100%;
+}
+
+.four_zero_four_bg{
+  height: 400px;
+  background-position: center;
+}
